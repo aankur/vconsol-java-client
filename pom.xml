@@ -10,11 +10,12 @@
     </parent>
     <groupId>com.techgentsia</groupId>
     <artifactId>vconsol-java-client</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <name>vconsol-java-client</name>
     <description>Java library for the Vconsol API</description>
     <properties>
         <java.version>17</java.version>
+        <spring-boot.repackage.skip>true</spring-boot.repackage.skip>
     </properties>
     <dependencies>
         <dependency>
