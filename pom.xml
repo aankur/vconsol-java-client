@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.techgentsia</groupId>
     <artifactId>vconsol-java-client</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <name>vconsol-java-client</name>
     <description>Java library for the Vconsol API</description>
     <properties>
