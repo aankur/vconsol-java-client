@@ -12,6 +12,7 @@ import java.util.Map;
 @Value
 public class MeetingUrl {
   String url;
+  String preAuthToken;
   Map<String, Object> queryParams;
 
   public String getUrl() {

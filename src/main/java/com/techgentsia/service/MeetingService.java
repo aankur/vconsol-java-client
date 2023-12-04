@@ -33,8 +33,9 @@ public class MeetingService extends ApiService {
   }
 
   private MeetingUrl generateMeetingURL(String response, MeetingUrlQueryParams meetingUrlQueryParams, RequestOptions requestOptions) {
+    final String preAuthToken = ApiResource.urlEncode(ApiResource.base64Encode(response));
     return new MeetingUrl(
-      String.format("%s/join/pre-auth/%s", getBaseURl(requestOptions), ApiResource.urlEncode(ApiResource.base64Encode(response))),
+      String.format("%s/join/pre-auth/%s", getBaseURl(requestOptions), preAuthToken), preAuthToken,
       meetingUrlQueryParams == null ? null : ApiRequestParams.paramsToMap(meetingUrlQueryParams)
     );
   }
