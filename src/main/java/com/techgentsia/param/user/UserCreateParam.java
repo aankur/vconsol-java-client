@@ -15,4 +15,6 @@ public class UserCreateParam extends ApiRequestParams {
 
   @Builder.Default
   String password = UUID.randomUUID().toString();
+
+  String ssoLead;
 }
