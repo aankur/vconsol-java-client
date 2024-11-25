@@ -40,4 +40,19 @@ public class UserService extends ApiService {
         ApiResource.getTypeReference(User.class),
         requestOptions);
   }
+
+  public User createUser2(UserCreateParam userCreateParam) {
+    return createUser2(userCreateParam, null);
+  }
+
+  public User createUser2(UserCreateParam userCreateParam, RequestOptions requestOptions) {
+    final String path = "/external/api/v1/user2";
+    return getResponseHandler()
+      .request(
+        ApiResource.RequestMethod.POST,
+        path,
+        ApiRequestParams.paramsToMap(userCreateParam),
+        ApiResource.getTypeReference(User.class),
+        requestOptions);
+  }
 }
